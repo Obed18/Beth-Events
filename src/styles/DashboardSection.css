@@ -1,0 +1,60 @@
+/* src/styles/DashboardSection.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f6fa;
+}
+
+.dashboard-card {
+  flex: 1 1 300px;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(138, 43, 226, 0.15);
+}
+
+.dashboard-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.chart-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f2f6;
+  border-radius: 0.75rem;
+  padding: 2.5rem 1rem;
+  min-height: 200px;
+  color: #555;
+}
+
+.chart-placeholder img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(82%) saturate(2264%)
+    hue-rotate(247deg) brightness(88%) contrast(103%);
+}
+
+.chart-placeholder p {
+  font-size: 0.95rem;
+  color: #555;
+}

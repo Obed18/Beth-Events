@@ -1,0 +1,154 @@
+/* Sidebar.css */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  height: 100vh;
+  padding-bottom: 20px; /* Ensures spacing at the bottom */
+  z-index: 20000;
+  background-color: #111827;
+  color: white;
+  top: 0;
+}
+
+.sidebar-logo-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 0.5px solid #779dab7d;
+  gap: 1rem;
+}
+.sidebar-logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.sidebar-nav-links {
+  flex: 1; /* This will push the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+.sidebar-nav-links button {
+  background: transparent;
+}
+.sidebar-footer-icons button {
+  background: transparent;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 1rem;
+  color: white;
+}
+
+.sidebar-nav-item:hover,
+.sidebar-nav-item.active {
+  padding: 1rem;
+  background-color: #9333ea;
+  border-radius: 1rem;
+}
+
+.sidebar-nav-icon {
+  margin-right: 12px;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+.sidebar-footer-icons {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  margin-top: auto;
+  color: white;
+  border-top: 0.5px solid #779dab7d;
+}
+.sidebar-footer-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #111827;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(-100%); /* Hidden by default */
+    z-index: 20000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Slide in when open */
+  }
+
+  .close-sidebar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+  }
+  .sidebar button {
+  background: transparent;
+}
+
+
+
+  .sidebar-nav-item {
+    font-size: 0.8rem;
+  }
+
+  .sidebar-nav-item:hover,
+  .sidebar-nav-item.active {
+    color: white;
+    background-color: #9333ea;
+  }
+}
+  /* Close Button */
+  .close-sidebar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+  }
+
+
+/* Hide Sidebar on Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%); /* Initially hidden */
+  }
+
+  /* Sidebar Appears when Open */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.recent-venues-container {
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  background: #f9fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-header {
+  font-weight: 600;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.table-row {
+  background-color: #fff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.table-row:hover {
+  background-color: #f1f5f9;
+}
+
+.venue-name,
+.venue-location,
+.venue-price,
+.venue-rating,
+.venue-categories {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.venue-rating .star {
+  color: #fbbf24;
+  margin-right: 0.25rem;
+}
+
+.category-tag {
+  background: #f0f4f8;
+  border-radius: 12px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  display: inline-block;
+  color: #4b5563;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1.5fr 2fr 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .venue-categories {
+    display: none;
+  }
+
+  .recent-venues-container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,12 @@
+.AdminMain {
+  margin-top: 6rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Mobile view (up to 767px) */
+@media (max-width: 900px) {
+  .AdminMain {
+    display: Block;
+  }
+}

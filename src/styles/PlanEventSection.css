@@ -1,0 +1,58 @@
+/* src/components/PlanEventSection.css */
+.plan-event-section {
+  background-color: #8e2de2;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.plan-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.plan-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #e0d8f5;
+}
+
+.plan-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.browse {
+  background-color: #fbbc04;
+  color: black;
+}
+
+.contact {
+  background-color: #a060ff;
+  color: white;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .plan-buttons {
+    flex-direction: row;
+  }
+
+  .btn {
+    margin: 0 0.5rem;
+  }
+}

@@ -1,0 +1,130 @@
+/* FeaturedVenues.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.featured-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.featured-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.featured-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.venues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.venue-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.venue-card:hover {
+  transform: translateY(-5px);
+}
+
+.venue-image-container {
+  position: relative;
+}
+
+.venue-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.venue-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: gold;
+  margin-right: 4px;
+}
+
+.venue-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.venue-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.venue-info p {
+  margin: 0.25rem 0;
+  color: #777;
+}
+
+.venue-price span {
+  color: #a000c8;
+  font-weight: bold;
+}
+
+.contact-button {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #fdbb20;
+  color: #000;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #e2a500;
+}
+
+.view-all-button {
+  padding: 0.75rem 2rem;
+  background-color: #7a00ff;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.view-all-button:hover {
+  background-color: #5d00cc;
+}
