@@ -11,7 +11,7 @@ export default function AdminLogin() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (email === "admin@bethevents.com" && password === "admin123") {
-      window.location.href = "/admin"; // Redirect to admin portal
+      window.location.href = "/admin", "_blank"; // Redirect to admin portal
     } else {
       alert("Invalid credentials");
     }
