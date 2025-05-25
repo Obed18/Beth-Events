@@ -151,7 +151,34 @@ body {
   font-weight: 600;
 }
 
-.modal input {
+.modal .name-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal .location-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal .rating-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal .categories-input {
   width: 100%;
   padding: 0.6rem 0.8rem;
   margin-bottom: 1rem;
@@ -313,16 +340,19 @@ body {
 .currency-prefix {
   position: absolute;
   left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   color: #444;
   font-size: 14px;
   pointer-events: none;
 }
 
-.price-input {
-  padding-left: 24px; /* Creates space for the ₵ symbol */
+.modal .price-input {
+  padding-left: 2rem; 
   width: 100%;
-  padding: 8px 10px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+

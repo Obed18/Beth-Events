@@ -10,29 +10,24 @@ export default function CateringManager() {
   const [modalOpen, setModalOpen] = useState(false);
   const [editingCatering, setEditingCatering] = useState(null);
 
-const handleDelete = async (id) => {
-  const { error } = await supabase.from('Catering').delete().eq('id', id);
-  if (error) console.error(error);
-  else setCatering(catering.filter(item => item.id !== id));
-};
-const handleSave = async (newItem) => {
-  if (editingCatering) {
-    const { data, error } = await supabase
-      .from('Catering')
-      .update(newItem)
-      .eq('id', editingCatering.id);
-  } else {
-    const { data, error } = await supabase
-      .from('Catering')
-      .insert([newItem]);
-  }
+  const handleDelete = (id) => {
+    setCatering(catering.filter((item) => item.id !== id));
+  };
 
-  // Refresh the list
-  const { data } = await supabase.from('Catering').select('*');
-  setCatering(data);
-  setModalOpen(false);
-  setEditingCatering(null);
-};
+  const handleSave = (updatedCatering) => {
+    if (editingCatering) {
+      setCatering(
+        catering.map((item) =>
+          item.id === updatedCatering.id ? updatedCatering : item
+        )
+      );
+    } else {
+      setCatering([...catering, { ...updatedCatering, id: Date.now() }]);
+    }
+    setModalOpen(false);
+    setEditingCatering(null);
+  };
+
   return (
     <div className="Catering-container">
       <div className="header-top">
@@ -49,7 +44,7 @@ const handleSave = async (newItem) => {
         <div className="table-header">
           <span>Name</span>
           <span>LOCATION</span>
-          <span>PRICE</span>
+          <span>PRICE ₵</span>
           <span>RATING</span>
           <span>CATEGORIES</span>
           <span>ACTIONS</span>
@@ -198,32 +193,37 @@ function Modal({ onClose, onSave, catering }) {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
+          className="name-input"
         />
-        <div className="price-input-wrapper">
-          <span className="currency-symbol">₵</span>
+        <input
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleChange}
+          className="location-input"
+        />
+        <div className="input-wrapper">
+          <label className="currency-prefix">₵</label>
           <input
             name="price"
             placeholder="0.00"
             value={formData.price}
             onChange={handleChange}
+            className="price-input"
           />
         </div>
-        <input
-          name="price"
-          placeholder="Price"
-          value={formData.price}
-          onChange={handleChange}
-        />
         <input
           name="rating"
           placeholder="Rating"
           value={formData.rating}
           onChange={handleChange}
+          className="rating-input"
         />
         <input
           placeholder="Categories (comma separated)"
           onChange={handleCategoryChange}
           value={formData.categories.join(", ")}
+          className="categories-input"
         />
         <div className="modal-actions">
           <button onClick={onClose} className="cancel">

@@ -151,7 +151,7 @@ body {
   font-weight: 600;
 }
 
-.modal input {
+.modal .name-input {
   width: 100%;
   padding: 0.6rem 0.8rem;
   margin-bottom: 1rem;
@@ -159,6 +159,52 @@ body {
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
 }
+
+.modal .location-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal .rating-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal .categories-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal .price-input {
+  padding-left: 2rem; 
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+
+
 
 .modal-actions {
   display: flex;
@@ -303,19 +349,19 @@ body {
   cursor: pointer;
 }
 
-.price-input-wrapper {
+.input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-.price-input-wrapper .currency-symbol {
+.currency-prefix {
   position: absolute;
-  left: 10px;
-  font-size: 16px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   color: #444;
-}
-
-.price-input-wrapper input {
-  padding-left: 24px; /* Add padding so text doesn't overlap the ₵ */
+  font-size: 14px;
+  pointer-events: none;
 }

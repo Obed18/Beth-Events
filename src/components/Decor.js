@@ -40,7 +40,7 @@ export default function DecorManager() {
         <div className="table-header">
           <span>Decor</span>
           <span>LOCATION</span>
-          <span>PRICE</span>
+          <span>PRICE ₵</span>
           <span>RATING</span>
           <span>CATEGORIES</span>
           <span>ACTIONS</span>
@@ -189,20 +189,23 @@ function Modal({ onClose, onSave, decor }) {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
+          className="name-input"
         />
         <input
           name="location"
           placeholder="Location"
           value={formData.location}
           onChange={handleChange}
+          className="location-input"
         />
-        <div className="price-input-wrapper">
-          <span className="currency-symbol">₵</span>
+        <div className="input-wrapper">
+          <label className="currency-prefix">₵</label>
           <input
             name="price"
             placeholder="0.00"
             value={formData.price}
             onChange={handleChange}
+            className="price-input"
           />
         </div>
         <input
@@ -210,11 +213,13 @@ function Modal({ onClose, onSave, decor }) {
           placeholder="Rating"
           value={formData.rating}
           onChange={handleChange}
+          className="rating-input"
         />
         <input
           placeholder="Categories (comma separated)"
           onChange={handleCategoryChange}
           value={formData.categories.join(", ")}
+          className="categories-input"
         />
         <div className="modal-actions">
           <button onClick={onClose} className="cancel">

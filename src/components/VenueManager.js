@@ -92,12 +92,14 @@ function Modal({ onClose, onSave, venue }) {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
+          className="name-input"
         />
         <input
           name="location"
           placeholder="Location"
           value={formData.location}
           onChange={handleChange}
+          className="location-input"
         />
         <div className="input-wrapper">
           <label className="currency-prefix">₵</label>
@@ -114,11 +116,13 @@ function Modal({ onClose, onSave, venue }) {
           placeholder="Rating"
           value={formData.rating}
           onChange={handleChange}
+          className="rating-input"
         />
         <input
           placeholder="Categories (comma separated)"
           onChange={handleCategoryChange}
           value={formData.categories.join(", ")}
+          className="categories-input"
         />
         <div className="modal-actions">
           <button onClick={onClose} className="cancel">
@@ -171,7 +175,7 @@ export default function VenueManager() {
         <div className="table-header">
           <span>VENUE</span>
           <span>LOCATION</span>
-          <span>PRICE</span>
+          <span>PRICE ₵</span>
           <span>RATING</span>
           <span>CATEGORIES</span>
           <span>ACTIONS</span>
